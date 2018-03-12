@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>进度条控制</title>
+</head>
+<link rel="stylesheet" href="progress.css">
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="progress.js"></script>
+<body>
+  <div>
+    <span>下载进度：<p class="bar"><p id="progressbar"></p></p></span><br/><br/>
+    <span>
+      <input type="button" value="开始" id="start" class="begin" onclick="progressBar()">
+      <input type="button" value="暂停" id="suspend" class="pause" onclick="pause()">
+      <input type="button" value="结束" id="finish" class="over">
+    </span>
+  </div>
+</body>
+</html>
