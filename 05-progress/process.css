@@ -1,0 +1,11 @@
+.bar{
+  width:200px;
+  height:15px;
+  border:1px solid;
+}
+#progressbar{
+  width:0px;
+  height:15px;
+  margin-top:-32px;
+  background:gray;
+}
