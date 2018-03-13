@@ -9,11 +9,11 @@
 <script src="progress.js"></script>
 <body>
   <div>
-    <span>下载进度：<p class="bar"><p id="progressbar"></p></p></span><br/><br/>
+    <progress max="100" value="0" id="pg"></progress>
     <span>
       <input type="button" value="开始" id="start" class="begin" onclick="progressBar()">
       <input type="button" value="暂停" id="suspend" class="pause" onclick="pause()">
-      <input type="button" value="结束" id="finish" class="over">
+      <input type="button" value="重置" id="finish" class="over" onclick="reset()">
     </span>
   </div>
 </body>
