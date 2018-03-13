@@ -1,18 +1,23 @@
+var bar;
 function progressBar(){
-  $("#progressbar").css("width","0px");
-  var speed = 20;
-
-var time = setInterval(function(){
-    nowWidth = parseInt($("#progressbar").width());
-    
-    if(nowWidth<=200){
-      barWidth = (nowWidth + 1)+"px";
-      $("#progressbar").css("width",barWidth);
-    }else{
-      clearInterval(time);
-    }
-  },speed);
+ var pg = document.getElementById('pg');
+ bar = setInterval(function(e){
+ if(pg.value!=100) pg.value++;
+    else pg.value=100;
+  },100);
 }
 function pause(){
-    progressBar();
+  var pg= document.getElementById('pg');
+  var stop = (pg.value-100)>0?bar-100:0;
+    for(var i = stop;i<=bar;i++){
+  clearInterval(i); 
+}
+}
+function reset(){
+  var pg = document.getElementById('pg');
+  pg.value=0;
+  bar = setInterval(function(e){
+    if(pg.value!=100) pg.value++;
+    else pg.value=100;
+  },100);
 }
